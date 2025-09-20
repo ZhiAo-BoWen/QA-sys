@@ -19,6 +19,7 @@
 ## 安装运行
 ### 1. 克隆项目
 ```cmd
+git clone https://github.com/ZhiAo-BoWen/QA-sys
 ```
 ### 2. 配置环境`config.py`
 1.配置数据库连接（本项目使用MySQL）
