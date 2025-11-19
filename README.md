@@ -41,6 +41,7 @@ python app.py
 ```
 ### 6. Docker启动（容器运行）
 ```
+cd QA-sys
 docker compose up --build -d
 docker exec qa-sys-web-1 flask db upgrade
 ```
