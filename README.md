@@ -1,6 +1,6 @@
 # Flask问答网站(QA-sys)
 
-#### 访问网址：http://8.136.48.193
+#### 访问网址：http://119.29.104.150:5000
 #### (未配置域名，域名须购买，购买后须备案才能挂载，备案的服务器使用期必须大于三个月)
 
 ## 技术栈
@@ -42,4 +42,5 @@ python app.py
 ### 6. Docker启动（容器运行）
 ```
 docker compose up --build -d
+docker exec qa-sys-web-1 flask db upgrade
 ```
