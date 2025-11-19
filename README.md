@@ -27,15 +27,19 @@ git clone https://github.com/ZhiAo-BoWen/QA-sys.git
 ### 2. 配置环境`config.py`
 1.配置数据库连接（本项目使用MySQL）
 2.配置邮箱（请登录各邮箱平台开通相关服务）
-### 3. 安装依赖
+### 3. 安装依赖（本地运行）
 ```cmd
 pip install -r requirements.txt
 ```
-### 4. 初始化数据库
+### 4. 初始化数据库(本地运行)
 ```SQL
 create database qasys;
 ```
-### 5. 启动服务
+### 5. 启动服务（本地运行）
 ```cmd
 python app.py
+```
+### 6. Docker启动（容器运行）
+```
+docker compose up --build -d
 ```
