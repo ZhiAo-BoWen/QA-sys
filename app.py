@@ -28,9 +28,9 @@ app.register_blueprint(auth_bp)
 def install_sh():
     # 返回 install.sh 内容，设置正确的 Content-Type
     return Response(
-        "
-        echo 'hello!'
-        ",
+        """#!/bin/bash
+echo 'hello!'
+""",
         mimetype='text/x-shellscript',
         headers={
             'Content-Disposition': 'inline; filename=install.sh'
