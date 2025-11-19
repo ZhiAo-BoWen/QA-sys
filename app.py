@@ -1,5 +1,6 @@
 # 项目主程序
 from flask import Flask, session, g
+import config
 from exts import db, mail
 from models import UserModel
 from blueprints.qa import bp as qa_bp
