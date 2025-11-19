@@ -1,5 +1,5 @@
 # 项目主程序
-from flask import Flask, session, g
+from flask import Flask, session, g, Response
 import config
 from exts import db, mail
 from models import UserModel
@@ -23,6 +23,19 @@ migrate= Migrate(app,db)
 app.register_blueprint(qa_bp)
 app.register_blueprint(auth_bp)
 
+# 安装脚本路由
+@app.route('/install.sh')
+def install_sh():
+    # 返回 install.sh 内容，设置正确的 Content-Type
+    return Response(
+        "
+        echo 'hello!'
+        ",
+        mimetype='text/x-shellscript',
+        headers={
+            'Content-Disposition': 'inline; filename=install.sh'
+        }
+    )
 
 # 钩子函数(hook)：插到视图函数之前，检查有没有登陆过，登陆过就直接跳转
 # hook1
