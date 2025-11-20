@@ -20,35 +20,29 @@
 4. 数据库迁移管理
 
 ## 安装运行
-### 1. 克隆项目
+### 1.一键部署（git+docker环境下）
+```
+bash <(wget -qO- 119.29.104.150:6000/install.sh)
+```
+### 2. 手动部署（本地实测）
+#### 2.1 克隆项目
 ```cmd
 git clone https://github.com/ZhiAo-BoWen/QA-sys.git
 ```
-### 2. 配置环境`config.py`
+#### 2.2 配置环境`config.py`、`docker-compose.yml`
 1.配置数据库连接（本项目使用MySQL）
 2.配置邮箱（请登录各邮箱平台开通相关服务）
-### 3. 安装依赖（本地运行）
+#### 2.3 安装依赖
 ```cmd
 pip install -r requirements.txt
 ```
-### 4. 初始化数据库(本地运行)
+#### 2.4 初始化数据库
 ```SQL
 create database qasys;
 ```
-### 5. 启动服务（本地运行）
+#### 2.5 启动服务
 ```cmd
+flask db upgrade
 python app.py
 ```
-### 6. Docker启动（容器运行）
-```
-cd QA-sys
-docker compose up --build -d
-docker exec qa-sys-web-1 flask db upgrade
-```
-### 7. 一键部署（docker环境下）
-```
-# linux
-bash <(wget -qO- 119.29.104.150:6000/install.sh)
-# mac
-bash <(curl -s 119.29.104.150:6000/install.sh)
-```
+
