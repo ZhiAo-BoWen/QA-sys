@@ -30,8 +30,8 @@ bash <(wget -qO- 119.29.104.150:6000/install.sh)
 git clone https://github.com/ZhiAo-BoWen/QA-sys.git
 ```
 #### 2.2 配置环境`config.py`、`docker-compose.yml`
-1.配置数据库连接（本项目使用MySQL）
-2.配置邮箱（请登录各邮箱平台开通相关服务）
+##### 2.2.1.配置数据库连接（本项目使用MySQL）
+##### 2.2.2.配置邮箱（请登录各邮箱平台开通相关服务）
 #### 2.3 安装依赖
 ```cmd
 pip install -r requirements.txt
