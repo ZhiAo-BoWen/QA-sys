@@ -27,7 +27,7 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
-      - "5000:5000"
+      - "3333:3333"
     restart: unless-stopped
     networks:
       - app-network
