@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r re
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 3333
 
 CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=3333"]
